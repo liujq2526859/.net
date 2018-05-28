@@ -39,9 +39,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_SqliteAddress = new System.Windows.Forms.TextBox();
             this.start_btn = new System.Windows.Forms.Button();
-            this.cancel_btn = new System.Windows.Forms.Button();
+            this.show_btn = new System.Windows.Forms.Button();
             this.saveFileDialog_browsesqlite = new System.Windows.Forms.SaveFileDialog();
+            this.dataGridView_sqlite = new System.Windows.Forms.DataGridView();
+            this.openFileDialog_setsqlite = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_dbf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_sqlite)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_DbfAddress
@@ -132,21 +135,36 @@
             this.start_btn.UseVisualStyleBackColor = true;
             this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
             // 
-            // cancel_btn
+            // show_btn
             // 
-            this.cancel_btn.Location = new System.Drawing.Point(592, 458);
-            this.cancel_btn.Name = "cancel_btn";
-            this.cancel_btn.Size = new System.Drawing.Size(75, 23);
-            this.cancel_btn.TabIndex = 10;
-            this.cancel_btn.Text = "Cancel";
-            this.cancel_btn.UseVisualStyleBackColor = true;
+            this.show_btn.Location = new System.Drawing.Point(12, 458);
+            this.show_btn.Name = "show_btn";
+            this.show_btn.Size = new System.Drawing.Size(75, 23);
+            this.show_btn.TabIndex = 10;
+            this.show_btn.Text = "Show";
+            this.show_btn.UseVisualStyleBackColor = true;
+            this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
+            // 
+            // dataGridView_sqlite
+            // 
+            this.dataGridView_sqlite.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_sqlite.Location = new System.Drawing.Point(12, 248);
+            this.dataGridView_sqlite.Name = "dataGridView_sqlite";
+            this.dataGridView_sqlite.RowTemplate.Height = 23;
+            this.dataGridView_sqlite.Size = new System.Drawing.Size(655, 199);
+            this.dataGridView_sqlite.TabIndex = 11;
+            // 
+            // openFileDialog_setsqlite
+            // 
+            this.openFileDialog_setsqlite.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 493);
-            this.Controls.Add(this.cancel_btn);
+            this.Controls.Add(this.dataGridView_sqlite);
+            this.Controls.Add(this.show_btn);
             this.Controls.Add(this.start_btn);
             this.Controls.Add(this.textBox_SqliteAddress);
             this.Controls.Add(this.label2);
@@ -159,6 +177,7 @@
             this.Name = "MainForm";
             this.Text = "主界面";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_dbf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_sqlite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,8 +195,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_SqliteAddress;
         private System.Windows.Forms.Button start_btn;
-        private System.Windows.Forms.Button cancel_btn;
+        private System.Windows.Forms.Button show_btn;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_browsesqlite;
+        private System.Windows.Forms.DataGridView dataGridView_sqlite;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_setsqlite;
     }
 }
 
